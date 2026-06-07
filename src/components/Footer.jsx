@@ -29,11 +29,10 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           
-          {/* Column 1: Logo & About */}
+          {/* Column 1: Brand & About */}
           <div className="space-y-6">
-            <Link to="/" className="flex items-center">
-              <img src="/logo.png" alt="MediGenX Logo" className="h-10 w-auto brightness-0 invert" />
-              <div className="text-2xl font-bold text-white font-heading hidden">
+            <Link to="/" className="inline-block">
+              <div className="text-2xl font-bold text-white font-heading">
                 Medi<span className="text-accent-cyan">GenX</span>
               </div>
             </Link>

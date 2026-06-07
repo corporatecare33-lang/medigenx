@@ -271,10 +271,10 @@ const Home = () => {
       </section>
 
       {/* 4. PARTNERS SECTION */}
-      <section className="py-20 bg-light-gray border-y border-soft-border">
+      <section className="py-12 sm:py-16 md:py-20 bg-light-gray border-y border-soft-border">
         <div className="container mx-auto px-4">
-          <p className="text-center text-xs font-bold text-dark-text/40 uppercase tracking-widest mb-10">Trusted Partners & Brands We Represent</p>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center opacity-70">
+          <p className="text-center text-xs font-bold text-dark-text/40 uppercase tracking-widest mb-8 sm:mb-10">Trusted Partners & Brands We Represent</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 items-center justify-items-center opacity-70">
             {[
               { name: "LinaTech", logoText: "LinaTech" },
               { name: "3M Medical", logoText: "3M Medical" },
@@ -282,7 +282,7 @@ const Home = () => {
               { name: "Medline", logoText: "Medline Supplies" },
               { name: "Cardinal Health", logoText: "CardinalHealth" }
             ].map((partner, index) => (
-              <div key={index} className="text-center font-heading font-black text-xl md:text-2xl text-primary-navy/80 tracking-tight hover:scale-105 hover:text-accent-cyan transition-all cursor-default select-none">
+              <div key={index} className="text-center font-heading font-black text-base sm:text-lg md:text-xl lg:text-2xl text-primary-navy/80 tracking-tight hover:scale-105 hover:text-accent-cyan transition-all cursor-default select-none">
                 {partner.logoText}
               </div>
             ))}
