@@ -27,10 +27,10 @@ const Footer = () => {
   return (
     <footer className="bg-primary-navy text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12 mb-12">
           
           {/* Column 1: Brand & About */}
-          <div className="space-y-6">
+          <div className="col-span-2 md:col-span-2 lg:col-span-1 space-y-6">
             <Link to="/" className="inline-block">
               <div className="text-2xl font-bold text-white font-heading">
                 Medi<span className="text-accent-cyan">GenX</span>
@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
 
           {/* Column 4: Contact & Social */}
-          <div className="space-y-6">
+          <div className="col-span-2 md:col-span-2 lg:col-span-1 space-y-6">
             <h3 className="text-lg font-bold mb-6 font-heading border-b border-white/10 pb-2">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex gap-3">
