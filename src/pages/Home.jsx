@@ -190,20 +190,20 @@ const Home = () => {
   return (
     <div className="bg-white">
       {/* 1. HERO SECTION */}
-      <section className="bg-primary-navy text-white py-24 lg:py-36 relative overflow-hidden">
+      <section className="bg-primary-navy text-white py-24 lg:py-36 relative overflow-hidden flex items-center min-h-screen">
         {/* Animated background highlights */}
         <div className="absolute top-1/4 right-10 w-96 h-96 bg-accent-cyan/10 rounded-full blur-3xl pointer-events-none animate-float" />
         <div className="absolute bottom-10 left-1/4 w-72 h-72 bg-accent-cyan/5 rounded-full blur-2xl pointer-events-none animate-float-delayed" />
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl">
+        <div className="container mx-auto px-4 relative z-10 w-full flex items-center justify-center">
+          <div className="max-w-4xl text-center">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 font-heading leading-tight drop-shadow-sm">
               Innovating Healthcare with Advanced Medical Solutions
             </h1>
-            <p className="text-lg md:text-xl mb-10 text-white/80 font-body leading-relaxed max-w-2xl font-light">
+            <p className="text-lg md:text-xl mb-10 text-white/80 font-body leading-relaxed max-w-2xl font-light mx-auto">
               Your trusted partner in cutting-edge radiotherapy technology, medical equipment, and strategic healthcare consultancy.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center">
               <Link 
                 to="/medical-equipment" 
                 className="bg-accent-cyan text-white px-8 py-3.5 rounded-lg font-bold hover:bg-white hover:text-primary-navy transition-all hover-scale shadow-md hover:shadow-lg"

@@ -114,18 +114,7 @@ const Consumables = () => {
         <div className="absolute top-0 right-0 w-1/4 h-full bg-accent-cyan/5 -skew-x-12 transform translate-x-1/2" />
       </section>
 
-      {/* Floating Cart Icon */}
-      <button 
-        onClick={() => setIsCartOpen(true)}
-        className="fixed top-24 right-8 z-40 bg-accent-cyan text-white p-4 rounded-lg shadow-lg hover:scale-105 transition-transform flex items-center justify-center"
-      >
-        <ShoppingCart size={24} />
-        {cartCount > 0 && (
-          <span className="absolute -top-2 -right-2 bg-primary-navy text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center border-2 border-white">
-            {cartCount}
-          </span>
-        )}
-      </button>
+      {/* Floating Cart Icon - Hidden */}
 
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col lg:flex-row gap-8">
@@ -258,9 +247,12 @@ const Consumables = () => {
                           <Eye size={20} />
                         </button>
                         <button 
-                          onClick={() => addToCart(product)}
+                          onClick={() => {
+                            const singleCart = [{ ...product, quantity: 1 }];
+                            navigate('/checkout', { state: { cart: singleCart, total: product.price } });
+                          }}
                           className="bg-accent-cyan text-white p-3 rounded-lg hover:bg-primary-navy transition-colors"
-                          title="Add to Cart"
+                          title="Buy Now"
                         >
                           <ShoppingCart size={20} />
                         </button>
@@ -275,10 +267,13 @@ const Consumables = () => {
                       <div className="mt-auto pt-4 border-t border-soft-border flex items-center justify-between">
                         <div className="text-xl font-bold text-primary-navy">৳{product.price.toLocaleString()}</div>
                         <button 
-                          onClick={() => addToCart(product)}
+                          onClick={() => {
+                            const singleCart = [{ ...product, quantity: 1 }];
+                            navigate('/checkout', { state: { cart: singleCart, total: product.price } });
+                          }}
                           className="flex items-center gap-2 text-accent-cyan font-bold text-sm hover:text-primary-navy transition-colors"
                         >
-                          <Plus size={16} /> Add
+                          <Plus size={16} /> Buy Now
                         </button>
                       </div>
                     </div>
