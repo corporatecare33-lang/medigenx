@@ -165,8 +165,15 @@ const Checkout = () => {
                 {cart.map(item => (
                   <div key={item.id} className="flex justify-between gap-4">
                     <div className="flex gap-3">
-                      <div className="w-12 h-12 bg-light-gray rounded-lg flex items-center justify-center text-xl shrink-0">
-                        {item.image}
+                      <div className="w-12 h-12 bg-light-gray rounded-lg overflow-hidden shrink-0">
+                        <img 
+                          src={item.image} 
+                          alt={item.name} 
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            e.target.style.display = 'none';
+                          }}
+                        />
                       </div>
                       <div>
                         <h4 className="text-sm font-bold text-primary-navy leading-tight line-clamp-2">{item.name}</h4>
